@@ -1,0 +1,23 @@
+{
+  "name": "grptut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "@types/axios": "^0.14.0",
+    "apollo-server-express": "^3.12.1",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "graphql": "^16.8.0",
+    "mongoose": "^7.5.1",
+    "nodemon": "^3.0.1"
+  }
+}
