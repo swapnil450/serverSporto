@@ -4,13 +4,14 @@ const typeDefs = gql`
     hello: String
     user: [user]
     getUserById(id: String!): user
-    Doctor(first: Int, last: Int): DoctorAll
-    Chemist(first: Int, last: Int): ChemistAll
-    Stockiest(first: Int, last: Int): StockiestAll
+    Doctor(first: Int, last: Int, Area: [String]): DoctorAll
+    Chemist(first: Int, last: Int, Area: [String]): ChemistAll
+    Stockiest(first: Int, last: Int, Area: [String]): StockiestAll
     Area(first: Int, last: Int): AreaAll
     HeadQ(first: Int, last: Int): HeadQAll
     Product(first: Int, last: Int): ProductAll
     FareChart(first: Int, last: Int): FareChartAll
+    TourProgram(month: String): TourProgramAll
   }
   type Mutation {
     createUser(input: userIn!): user
@@ -159,6 +160,9 @@ const typeDefs = gql`
     lengthData: Int
     FareChart: [FareChart]
   }
+  type TourProgramAll {
+    TourProgram: [TourProgram]
+  }
   type Area {
     AreaName: String
     Type: String
@@ -195,6 +199,22 @@ const typeDefs = gql`
     FarePrice: Int
     TravelMode: String
     Active: Boolean
+  }
+  type TourProgram {
+    _id: String!
+    startDate: Date
+    lastDate: Date
+    post: String
+    area: [String]
+    month: String
+    createdBy: String
+    createdByName: String
+    createdAt: Date
+    DcrId: String
+    Useable: Boolean
+    SentToApv: Boolean
+    Act: Boolean
+    Apv: Boolean
   }
 `;
 

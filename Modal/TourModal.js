@@ -1,25 +1,5 @@
 const mongoose = require("mongoose");
 
-// const AreaSchema = new mongoose.Schema({
-//   AreaName: { type: String },
-//   Type: { type: String },
-// });
-
-// const DateWiseShema = new mongoose.Schema({
-//   Date: {
-//     type: Date,
-//   },
-//   workWith: {
-//     type: String,
-//   },
-//   area: [AreaSchema],
-//   Activity: {
-//     type: String,
-//   },
-//   ExpectedBuisness: {
-//     type: String,
-//   },
-// });
 const tourProgramSchema = new mongoose.Schema({
   startDate: {
     type: Date,

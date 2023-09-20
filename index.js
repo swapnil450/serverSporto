@@ -34,6 +34,10 @@ const apolloServerStarter = async () => {
   );
   console.log("database Connected....");
 
+  app.get("/", (req, res) => {
+    res.send("we are live!");
+  });
+
   app.listen(8000, () => console.log("server is running on port 4000 !"));
 };
 

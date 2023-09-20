@@ -16,6 +16,7 @@ const { HeadQRes } = require("../Resolvers/HeadQResolver");
 const { ProductRes } = require("../Resolvers/ProductResolver");
 
 const { FareChartRes } = require("../Resolvers/FareChartResolver");
+const { TourProgramRes } = require("../Resolvers/TourProgramResolvers");
 
 const resolvers = {
   // Queru the Data
@@ -30,6 +31,7 @@ const resolvers = {
     HeadQ: HeadQRes,
     Product: ProductRes,
     FareChart: FareChartRes,
+    TourProgram: TourProgramRes,
   },
   //   Mutation of Data
   Mutation: {
