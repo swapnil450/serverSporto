@@ -164,6 +164,7 @@ const typeDefs = gql`
     TourProgram: [TourProgram]
   }
   type Area {
+   _id: String!
     AreaName: String
     Type: String
     Active: Boolean
