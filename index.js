@@ -11,6 +11,7 @@ app.use(
       "https://studio.apollographql.com",
       "http://localhost:3000",
       "https://sbtadmin.vercel.app",
+      "https://sbtweb.vercel.app"
     ], // Change this to your frontend's URL
     optionsSuccessStatus: 200,
   })
