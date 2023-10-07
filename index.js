@@ -10,8 +10,7 @@ app.use(
     origin: [
       "https://studio.apollographql.com",
       "http://localhost:3000",
-      "http://localhost:3001",
-      "http://192.168.43.58:3000",
+      "https://sbtadmin.vercel.app",
     ], // Change this to your frontend's URL
     optionsSuccessStatus: 200,
   })
