@@ -1,8 +1,28 @@
 const ProductModel = require("../Modal/ProductModel");
 
-const GetProduct = async () => {
-  const Product = ProductModel.find();
-  return Product;
+const GetProduct = async (_, { first, last, type }) => {
+  try {
+    const skip = await last > 0 ? Math.max(0, first - last) : 0;
+    const limit = await last > 0 ? last : first;
+    if (type) {
+      const Product = await ProductModel.find({ type: type }).skip(skip).limit(limit).exec();
+      return {
+        Data: Product,
+        length: Number(Product.length)
+      }
+    } else {
+      const Product = await ProductModel.find().skip(skip).limit(limit).exec();
+      const TotalProduct = await ProductModel.find()
+      return {
+        Data: Product,
+        length: Number(TotalProduct.length)
+      }
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+
 };
 
 const GetProductById = async (_, { _id }) => {

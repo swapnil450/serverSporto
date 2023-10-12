@@ -5,7 +5,7 @@ const typeDefs = gql`
   type Query {
     hello: String
     user(first:Int,last:Int): UserData
-    products: [Product]
+    products(first:Int,last:Int,type:String): ProductData
     ProductById(_id: String!): Product
   }
   type Mutation {
@@ -22,14 +22,16 @@ type delUSer {
   message:String
   status:Boolean
 }
-
   type Error {
-    message: String
-    
+    message: String  
   }
 
   type UserData {
     Data: [user]
+    length: Int
+  }
+  type ProductData {
+    Data: [Product]
     length: Int
   }
 
