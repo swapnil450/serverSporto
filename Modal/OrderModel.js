@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const Month = new Date().getMonth()
+const Year = new Date().getFullYear()
 // Define the Product schema
 const productSchema = new mongoose.Schema({
   product: String,
@@ -33,7 +35,15 @@ const orderSchema = new mongoose.Schema({
   time: String,
 
   totalAmount: String,
-  month: String,
+  month: {
+    type: String,
+    default: Month,
+
+  },
+  year: {
+    type: String,
+    default: Year,
+  },
   active: Boolean,
   process: Boolean,
   delivered: Boolean,
