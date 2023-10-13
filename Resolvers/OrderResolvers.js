@@ -111,7 +111,7 @@ const GetOrderByMonthYear = async (_, { year, month }) => {
     });
 
     const Data = {
-      data: DataOfMonthAndYear,
+      Data: DataOfMonthAndYear,
       length: DataOfMonthAndYear.length,
     };
 
