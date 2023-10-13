@@ -105,15 +105,28 @@ const GetAllOrders = async (_, { first, last, createdAt }) => {
 
 const GetOrderByMonthYear = async (_, { year, month }) => {
   try {
-    const DataOfMonthAndYear = await OrderModel.find({ month: month });
-  } catch (error) {
+    const DataOfMonthAndYear = await OrderModel.find({
+      month: String(month),
+      year: String(year)
+    });
 
+    const Data = {
+      data: DataOfMonthAndYear,
+      length: DataOfMonthAndYear.length,
+    };
+
+    return Data;
+  } catch (error) {
+    console.error(error);
+    throw error; // Re-throw the error to handle it further up the call stack
   }
 }
+
 module.exports = {
   CreateOrder,
   GetOrderByEmail,
   DeleteOrder,
   UpdateOrder,
   GetAllOrders,
+  GetOrderByMonthYear
 };

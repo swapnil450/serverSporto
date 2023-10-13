@@ -20,6 +20,7 @@ const {
   DeleteOrder,
   UpdateOrder,
   GetAllOrders,
+  GetOrderByMonthYear
 } = require("../Resolvers/OrderResolvers");
 const resolvers = {
   // Queru the Data
@@ -30,6 +31,7 @@ const resolvers = {
     ProductById: GetProductById,
     getOrderByEmailId: GetOrderByEmail,
     getAllOrders: GetAllOrders,
+    GetOrderByMonthYear: GetOrderByMonthYear
   },
   //   Mutation of Data
   Mutation: {

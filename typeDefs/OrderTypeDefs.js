@@ -4,6 +4,7 @@ const ORDER_TYPE = gql`
   type Query {
     getOrderByEmailId(id: String!): [Order]
     getAllOrders(first: Int, last: Int, createdAt: String): OrderData
+    GetOrderByMonthYear(year: String, month: String): OrderData
   }
 
   type Mutation {

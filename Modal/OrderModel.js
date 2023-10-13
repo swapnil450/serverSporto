@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Month = new Date().getMonth()
+const Month = new Date().getMonth() + 1
 const Year = new Date().getFullYear()
 // Define the Product schema
 const productSchema = new mongoose.Schema({
