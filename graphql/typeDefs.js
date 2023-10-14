@@ -7,6 +7,7 @@ const typeDefs = gql`
     user(first:Int,last:Int): UserData
     products(first:Int,last:Int,type:String): ProductData
     ProductById(_id: String!): Product
+    DataForDashborad:DashboardData
   }
   type Mutation {
     CreateProduct(input: ProductInput): Product
@@ -16,6 +17,31 @@ const typeDefs = gql`
     createUser(input: userIn!): CreateUserResponse
     SignInUser(data: userSignIn!): SignInUserResponse
     ChangePassword(input: ChangePassword!): ChangePassResponse
+  }
+
+  type DashboardData {
+    order: [Order]
+    userData: [user],
+    ProductData:[Product]
+  }
+
+  type Order {
+    _id: String
+    PaymentMode: String
+    productsDetails: [OrderProduct]
+    orderid: String
+    address: [Address]
+    totalAmount: Int
+    month: String
+    email: String
+    name: String
+    time: String
+    active: Boolean
+    process: Boolean
+    delivered: Boolean
+    canceled: Boolean
+    canceledByUser: Boolean
+    createdAt: String
   }
 
 type delUSer {
@@ -81,6 +107,7 @@ type delUSer {
     mobile: String
     Active: Boolean
   }
+
   type Product {
     _id: String
     product_name: String

@@ -1,5 +1,5 @@
 const UserAuthModal = require("../Modal/UserAuthModal");
-
+const { DataForDashborad } = require("../Resolvers/CommonDataResolvers")
 const {
   user,
   CreateUser,
@@ -31,7 +31,8 @@ const resolvers = {
     ProductById: GetProductById,
     getOrderByEmailId: GetOrderByEmail,
     getAllOrders: GetAllOrders,
-    GetOrderByMonthYear: GetOrderByMonthYear
+    GetOrderByMonthYear: GetOrderByMonthYear,
+    DataForDashborad: DataForDashborad
   },
   //   Mutation of Data
   Mutation: {
