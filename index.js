@@ -1,10 +1,12 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const cors = require("cors");
+const Helmet = require("helmet")
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
+app.use(Helmet)
 app.use(
   cors({
     origin: [
@@ -42,8 +44,6 @@ const apolloServerStarter = async () => {
   }
 };
 
-// app.use("/", (req, res) => {
-//   res.send("we are live");
-// });
+
 
 apolloServerStarter();
