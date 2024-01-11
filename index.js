@@ -1,19 +1,18 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const cors = require("cors");
-const helmet = require("helmet")
+const helmet = require("helmet");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
-app.use(helmet())
+app.use(helmet());
 app.use(
   cors({
     origin: [
       "https://studio.apollographql.com",
-      "http://localhost:3000",
       "https://sbtadmin.vercel.app",
-      "https://sbtweb.vercel.app"
+      "https://www.soilboostertechnologies.in",
     ], // Change this to your frontend's URL
     optionsSuccessStatus: 200,
   })
