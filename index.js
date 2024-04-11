@@ -10,9 +10,10 @@ app.use(helmet());
 app.use(
   cors({
     origin: [
-      "https://studio.apollographql.com",
-      "https://sbtadmin.vercel.app",
-      "https://www.soilboostertechnologies.in",
+      "http://localhost:3000",
+      "http://localhost:3001",
+      // "https://sbtadmin.vercel.app",
+      // "https://www.soilboostertechnologies.in",
     ], // Change this to your frontend's URL
     optionsSuccessStatus: 200,
   })
