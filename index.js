@@ -12,6 +12,8 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
+      "https://listing-indol.vercel.app",
+      "https://adminlisting.vercel.app"
       // "https://sbtadmin.vercel.app",
       // "https://www.soilboostertechnologies.in",
     ], // Change this to your frontend's URL
