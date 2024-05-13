@@ -10,8 +10,8 @@ app.use(helmet());
 app.use(
   cors({
     origin: [
-      "https://sportoweb.vercel.app",
-      "https://sportoadmin.vercel.app",
+      "http://localhost:3000",
+      "http://localhost:3001",
       // "https://sbtadmin.vercel.app",
       // "https://www.soilboostertechnologies.in",
     ], // Change this to your frontend's URL

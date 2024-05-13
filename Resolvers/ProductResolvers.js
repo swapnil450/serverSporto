@@ -34,12 +34,10 @@ const CreateProduct = async (_, { input }) => {
   try {
     // Create the product and store the result
     const createdProduct = await ProductModel.create(input);
-
     // Return the created product data
     return createdProduct;
   } catch (error) {
     // Handle the error and return an error message
-
     throw new Error("Failed to create product");
   }
 };
